@@ -24,8 +24,36 @@ namespace M120Projekt
         public MainWindow()
         {
             InitializeComponent();
-            DemoErstellen();
-            DemoAbfragen();
+            List<DAL.Kategorie> kategorienData = BLL.Kategorie.LesenAlle();
+            
+            
+            foreach(var kategorie in kategorienData)
+            {
+                var button = new Button
+                {
+                    Content = kategorie.Name,
+                    Height = 30,
+                    Width = 200,
+                    Margin = new Thickness
+                    {
+                        Top = 5,
+                        Bottom = 5,
+                        Left = 25
+                    },
+                    HorizontalAlignment = HorizontalAlignment.Left,
+                    HorizontalContentAlignment = HorizontalAlignment.Left,
+                    Padding = new Thickness
+                    {
+                        Left = 5
+                    },
+                    Tag = kategorie.KategorieId
+                };
+                button.Click += select_kategorie_Click;
+                kategorien.Children.Add(button);
+                
+            }
+
+
         }
         #region Demo
         private void DemoErstellen()
@@ -68,5 +96,41 @@ namespace M120Projekt
             Debug.Print(output);
         }
         #endregion
+
+        private void search_textbox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            search_textbox.Text = "";
+        }
+
+        private void search_textbox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            search_textbox.Text = "Suche";
+        }
+
+        private void search_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void select_kategorie_Click(object sender, RoutedEventArgs e)
+        {
+            var clicktButtonTag = (sender as Button).Tag.ToString();
+            var clicketButtonname = (sender as Button).Name;
+
+            var kategorie = BLL.Kategorie.LesenID(Convert.ToInt64(clicktButtonTag));
+
+            var passwörter = BLL.Passwort.LesenFremdschluesselGleich(kategorie);
+
+            var kagegorieElement = new M120Projekt.Kategorie((int)kategorie.KategorieId);
+
+            content.Children.Add(kagegorieElement);
+        }
+
+        public void showPassword(int passwordId)
+        {
+            content.Children.Clear();
+
+
+        }
     }
 }

@@ -5,8 +5,68 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:M120Projekt"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="1000">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Background="#FFECECEC" Panel.ZIndex="100">
+            <DockPanel.Effect>
+                <DropShadowEffect Direction="270" Color="#FFBBBBBB" BlurRadius="10" ShadowDepth="3"/>
+            </DockPanel.Effect>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="300"/>
+                </Grid.ColumnDefinitions>
+                <DockPanel Grid.Column="1">
+                    <WrapPanel DockPanel.Dock="Top" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBox x:Name="search_textbox" Text="Suche" Width="200" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Background="White" BorderBrush="White" VerticalContentAlignment="Center" GotFocus="search_textbox_GotFocus" LostFocus="search_textbox_LostFocus">
+                            <TextBox.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="3"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                        <Button x:Name="search_button" Height="30" Width="70" Margin="20,0,0,0"  Content="Suchen" HorizontalContentAlignment="Center" Click="search_button_Click">
+                        </Button>
+                    </WrapPanel>
+                </DockPanel>
+                <DockPanel>
+                    <WrapPanel DockPanel.Dock="Top" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <Label Content="Passwort Manager" FontSize="25"></Label>
+                    </WrapPanel>
+                </DockPanel>
+            </Grid>
+        </DockPanel>
+        <Grid Grid.Row="1" Margin="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <DockPanel Background="White">
+                <DockPanel.Effect>
+                    <DropShadowEffect Direction="300" Color="#FFBBBBBB" BlurRadius="20" ShadowDepth="3"/>
+                </DockPanel.Effect>
+                <Label DockPanel.Dock="Top" Content="Wählen sie die Kategorie!" FontSize="15" Margin="25,0,0,0"/>
+                <StackPanel x:Name="kategorien" >
+                </StackPanel>
+            </DockPanel>
+            <Grid Grid.Column="1" x:Name="content"></Grid>
+        </Grid>
     </Grid>
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#FF4286F4"></Setter>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="#00707070"></Setter>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect ShadowDepth="0" Opacity="0.8" Color="#FFA8A8A8"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
 </Window>
