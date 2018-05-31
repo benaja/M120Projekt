@@ -37,23 +37,10 @@ namespace M120Projekt
 
             var password = BLL.Passwort.LesenID(cellItemId);
             
-            MessageBoxResult result = MessageBox.Show("Wählen sie ihre Aktion!", "Navigation", MessageBoxButton.YesNoCancel);
-            switch (result)
-            {
-                case MessageBoxResult.Yes:
-                    MessageBox.Show("Hello to you too!", "My App");
-                    break;
-                case MessageBoxResult.No:
-                    MessageBox.Show("Oh well, too bad!", "My App");
-                    break;
-                case MessageBoxResult.Cancel:
-                    MessageBox.Show("Nevermind then...", "My App");
-                    break;
-            }
-
-
             MainWindow parentWindow = (MainWindow)Window.GetWindow(this);
             parentWindow.showPassword(cellItemId);
         }
+
+        
     }
 }
