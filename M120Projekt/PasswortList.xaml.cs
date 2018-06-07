@@ -42,5 +42,19 @@ namespace M120Projekt
             MainWindow parentWindow = (MainWindow)Window.GetWindow(this);
             parentWindow.showPassword(cellItemId);
         }
+
+        public void setAnzahlErgebnisse(int ergebnisse)
+        {
+            anzahl_ergebnisse.Visibility = Visibility.Visible;
+            anzahl_ergebnisse.Content = $"Anzahl Ergebnisse: {ergebnisse}";
+            if(ergebnisse > 0)
+            {
+                anzahl_ergebnisse.Foreground = new SolidColorBrush(Color.FromRgb(45, 194, 38));
+            }
+            else
+            {
+                anzahl_ergebnisse.Foreground = new SolidColorBrush(Color.FromRgb(244, 48, 38));
+            }
+        }
     }
 }

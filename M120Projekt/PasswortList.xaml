@@ -7,11 +7,16 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid Name="passwoerter" AutoGenerateColumns="False" CanUserAddRows="false" SelectedCellsChanged="selectedCellsChanged">
-            <DataGrid.Columns >
-                <DataGridTextColumn Header="Zielsystem" Binding="{Binding Zielsystem}" Width="1*" />
-                <DataGridTextColumn Header="Login" Binding="{Binding Login}" Width="1*"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <StackPanel>
+            <Label Visibility="Collapsed" x:Name="anzahl_ergebnisse" DockPanel.Dock="Top" Content="Anzahl Ergebnisse: " HorizontalAlignment="Center"></Label>
+            <Grid>
+                <DataGrid Name="passwoerter" AutoGenerateColumns="False" CanUserAddRows="false" SelectedCellsChanged="selectedCellsChanged">
+                    <DataGrid.Columns >
+                        <DataGridTextColumn Header="Zielsystem" Binding="{Binding Zielsystem}" Width="1*" />
+                        <DataGridTextColumn Header="Login" Binding="{Binding Login}" Width="1*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </StackPanel>
     </Grid>
 </UserControl>

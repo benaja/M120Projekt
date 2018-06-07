@@ -50,7 +50,8 @@ namespace M120Projekt
             }
 
             var passwortList = new M120Projekt.PasswortList(passwörterId);
-
+            passwortList.setAnzahlErgebnisse(passwörterId.Count());
+            showDefault();
             content.Children.Add(passwortList);
         }
 

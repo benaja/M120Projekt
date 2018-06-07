@@ -25,8 +25,16 @@ namespace CodedUITestProject1
         [TestMethod]
         public void CodedUITestMethod1()
         {
-            // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-            this.UIMap.CreateNewPasswort();
+
+            this.UIMap.test();
+            this.UIMap.ErstelleKategorie();
+            this.UIMap.ErstellePasswort();
+            this.UIMap.prueffePasswort();
+            this.UIMap.EditPasswort();
+            this.UIMap.prueffePasswortNachAenderung();
+            this.UIMap.sucheNachNichtExistierendem();
+            this.UIMap.prueffeAnzahlErgebnisse();
+
 
 
         }
