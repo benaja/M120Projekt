@@ -1,4 +1,4 @@
-﻿namespace CodedUITestProject1
+﻿namespace CodedUITest1
 {
     using System;
     using System.Collections.Generic;

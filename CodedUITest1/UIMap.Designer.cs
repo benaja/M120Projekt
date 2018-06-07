@@ -8,7 +8,7 @@
 //  </auto-generated>
 // ------------------------------------------------------------------------------
 
-namespace CodedUITestProject1
+namespace CodedUITest1
 {
     using System;
     using System.CodeDom.Compiler;
@@ -31,93 +31,32 @@ namespace CodedUITestProject1
     {
         
         /// <summary>
-        /// CreateNewPasswort - Use 'CreateNewPasswortParams' to pass parameters into this method.
-        /// </summary>
-        public void CreateNewPasswort()
-        {
-            #region Variable Declarations
-            WinEdit uINameEdit = this.UIDebugWindow.UIItemWindow.UIM120ProjektexeListItem.UINameEdit;
-            WpfButton uINeuButton = this.UIMainWindowWindow.UINeuButton;
-            WpfEdit uIZielsystemEdit = this.UIMainWindowWindow.UIItemCustom.UIZielsystemEdit;
-            WpfEdit uILoginEdit = this.UIMainWindowWindow.UIItemCustom.UILoginEdit;
-            WpfComboBox uIKategorieComboBox = this.UIMainWindowWindow.UIItemCustom.UIKategorieComboBox;
-            WpfDatePicker uIAblaufdatumDatePicker = this.UIMainWindowWindow.UIItemCustom.UIAblaufdatumDatePicker;
-            WpfEdit uINew_passwortEdit = this.UIMainWindowWindow.UIItemCustom.UINew_passwortEdit;
-            WpfEdit uIRepeat_passwordEdit = this.UIMainWindowWindow.UIItemCustom.UIRepeat_passwordEdit;
-            WpfButton uISpeichernButton = this.UIMainWindowWindow.UIItemCustom.UISpeichernButton;
-            WpfButton uIKategorie1Button = this.UIMainWindowWindow.UIKategorie1Button;
-            WpfText uIWwwgooglechText = this.UIMainWindowWindow.UIItemCustom1.UIPasswoerterTable.UIItem24Row.UIWwwgooglechCell.UIWwwgooglechText;
-            #endregion
-
-            // Double-Click 'Name' text box
-            Mouse.DoubleClick(uINameEdit, new Point(53, 12));
-
-            // Click 'Neu' button
-            Mouse.Click(uINeuButton, new Point(55, 8));
-
-            // Type 'www.google.ch' in 'zielsystem' text box
-            uIZielsystemEdit.Text = this.CreateNewPasswortParams.UIZielsystemEditText;
-
-            // Type '{Tab}' in 'zielsystem' text box
-            Keyboard.SendKeys(uIZielsystemEdit, this.CreateNewPasswortParams.UIZielsystemEditSendKeys, ModifierKeys.None);
-
-            // Type 'benaja' in 'login' text box
-            uILoginEdit.Text = this.CreateNewPasswortParams.UILoginEditText;
-
-            // Type 'Alt, Control + 2' in 'login' text box
-            Keyboard.SendKeys(uILoginEdit, this.CreateNewPasswortParams.UILoginEditSendKeys, (ModifierKeys.Alt | ModifierKeys.Control));
-
-            // Type 'benaja@gmail.com' in 'login' text box
-            uILoginEdit.Text = this.CreateNewPasswortParams.UILoginEditText1;
-
-            // Select 'Kategorie 1' in 'kategorie' combo box
-            uIKategorieComboBox.SelectedItem = this.CreateNewPasswortParams.UIKategorieComboBoxSelectedItem;
-
-            // Select '07-Jun-2018' in 'ablaufdatum' date picker
-            uIAblaufdatumDatePicker.DateAsString = this.CreateNewPasswortParams.UIAblaufdatumDatePickerDateAsString;
-
-            // Click 'new_passwort' text box
-            Mouse.Click(uINew_passwortEdit, new Point(14, 10));
-
-            // Type '********' in 'new_passwort' text box
-            Keyboard.SendKeys(uINew_passwortEdit, this.CreateNewPasswortParams.UINew_passwortEditSendKeys, true);
-
-            // Type '********' in 'repeat_password' text box
-            Keyboard.SendKeys(uIRepeat_passwordEdit, this.CreateNewPasswortParams.UIRepeat_passwordEditSendKeys, true);
-
-            // Click 'Speichern' button
-            Mouse.Click(uISpeichernButton, new Point(41, 5));
-
-            // Click 'Kategorie 1' button
-            Mouse.Click(uIKategorie1Button, new Point(147, 17));
-
-            // Click 'www.google.ch' label
-            Mouse.Click(uIWwwgooglechText, new Point(124, 8));
-        }
-        
-        /// <summary>
         /// ErstelleKategorie - Use 'ErstelleKategorieParams' to pass parameters into this method.
         /// </summary>
         public void ErstelleKategorie()
         {
             #region Variable Declarations
             WinEdit uINameEdit = this.UIDebugWindow.UIItemWindow.UIM120ProjektexeListItem.UINameEdit;
+            WpfButton uINeuButton = this.UIMainWindowWindow.UINeuButton;
             WpfButton uIKategorieerstellenButton = this.UIMainWindowWindow.UIKategorieerstellenButton;
-            WpfEdit uINameEdit1 = this.UIMainWindowWindow.UIItemCustom2.UINameEdit;
-            WpfButton uISpeichernButton = this.UIMainWindowWindow.UIItemCustom2.UISpeichernButton;
+            WpfEdit uINameEdit1 = this.UIMainWindowWindow.UIItemCustom.UINameEdit;
+            WpfButton uISpeichernButton = this.UIMainWindowWindow.UIItemCustom.UISpeichernButton;
             #endregion
 
             // Double-Click 'Name' text box
-            Mouse.DoubleClick(uINameEdit, new Point(12, 9));
+            Mouse.DoubleClick(uINameEdit, new Point(46, 7));
+
+            // Click 'Neu' button
+            Mouse.Click(uINeuButton, new Point(46, 10));
 
             // Click 'Kategorie erstellen' button
-            Mouse.Click(uIKategorieerstellenButton, new Point(118, 7));
+            Mouse.Click(uIKategorieerstellenButton, new Point(110, 18));
 
-            // Type 'Websiten' in 'name' text box
+            // Type 'Webseiten' in 'name' text box
             uINameEdit1.Text = this.ErstelleKategorieParams.UINameEditText;
 
             // Click 'Speichern' button
-            Mouse.Click(uISpeichernButton, new Point(27, 12));
+            Mouse.Click(uISpeichernButton, new Point(25, 18));
         }
         
         /// <summary>
@@ -127,66 +66,87 @@ namespace CodedUITestProject1
         {
             #region Variable Declarations
             WpfButton uINeuButton = this.UIMainWindowWindow.UINeuButton;
-            WpfEdit uIZielsystemEdit = this.UIMainWindowWindow.UIItemCustom.UIZielsystemEdit;
-            WpfEdit uILoginEdit = this.UIMainWindowWindow.UIItemCustom.UILoginEdit;
-            WpfComboBox uIKategorieComboBox = this.UIMainWindowWindow.UIItemCustom.UIKategorieComboBox;
-            WpfDatePicker uIAblaufdatumDatePicker = this.UIMainWindowWindow.UIItemCustom.UIAblaufdatumDatePicker;
-            WpfEdit uINew_passwortEdit = this.UIMainWindowWindow.UIItemCustom.UINew_passwortEdit;
-            WpfEdit uIRepeat_passwordEdit = this.UIMainWindowWindow.UIItemCustom.UIRepeat_passwordEdit;
-            WpfButton uISpeichernButton = this.UIMainWindowWindow.UIItemCustom.UISpeichernButton;
-            WpfButton uIWebsitenButton = this.UIMainWindowWindow.UIWebsitenButton;
-            WpfText uIWwwgooglechText = this.UIMainWindowWindow.UIItemCustom1.UIPasswoerterTable.UIItem1Row.UIWwwgooglechCell.UIWwwgooglechText;
-            WpfButton uIPasswortanzeigenButton = this.UIMainWindowWindow.UIItemCustom21.UIPasswortanzeigenButton;
+            WpfEdit uIZielsystemEdit = this.UIMainWindowWindow.UIItemCustom1.UIZielsystemEdit;
+            WpfCustom uIItemCustom2 = this.UIMainWindowWindow.UIItemCustom2;
+            WpfEdit uILoginEdit = this.UIMainWindowWindow.UIItemCustom3.UILoginEdit;
+            WpfEdit uILoginEdit1 = this.UIMainWindowWindow.UIItemCustom4.UILoginEdit;
+            WpfEdit uILoginEdit2 = this.UIMainWindowWindow.UIItemCustom5.UILoginEdit;
+            WpfComboBox uIKategorieComboBox = this.UIMainWindowWindow.UIItemCustom6.UIKategorieComboBox;
+            WpfDatePicker uIAblaufdatumDatePicker = this.UIMainWindowWindow.UIItemCustom7.UIAblaufdatumDatePicker;
+            WpfEdit uINew_passwortEdit = this.UIMainWindowWindow.UIItemCustom8.UINew_passwortEdit;
+            WpfEdit uINew_passwortEdit1 = this.UIMainWindowWindow.UIItemCustom9.UINew_passwortEdit;
+            WpfEdit uIRepeat_passwordEdit = this.UIMainWindowWindow.UIItemCustom10.UIRepeat_passwordEdit;
+            WpfEdit uIRepeat_passwordEdit1 = this.UIMainWindowWindow.UIItemCustom11.UIRepeat_passwordEdit;
+            WpfButton uISpeichernButton = this.UIMainWindowWindow.UIItemCustom12.UISpeichernButton;
+            WpfButton uIWebseitenButton = this.UIMainWindowWindow.UIWebseitenButton;
+            WpfText uIWwwgooglechText = this.UIMainWindowWindow.UIItemCustom13.UIPasswoerterTable.UIItem1Row.UIWwwgooglechCell.UIWwwgooglechText;
+            WpfButton uIPasswortanzeigenButton = this.UIMainWindowWindow.UIItemCustom2.UIPasswortanzeigenButton;
             WinButton uIJAButton = this.UIInformationWindow.UIJAWindow.UIJAButton;
             #endregion
 
             // Click 'Neu' button
-            Mouse.Click(uINeuButton, new Point(10, 9));
+            Mouse.Click(uINeuButton, new Point(56, 17));
 
             // Type 'www.google.ch' in 'zielsystem' text box
             uIZielsystemEdit.Text = this.ErstellePasswortParams.UIZielsystemEditText;
 
-            // Type 'benaja.hunzinger' in 'login' text box
+            // Click custom control
+            Mouse.Click(uIItemCustom2, new Point(155, 89));
+
+            // Type 'benaja' in 'login' text box
             uILoginEdit.Text = this.ErstellePasswortParams.UILoginEditText;
 
             // Type 'Alt, Control + 2' in 'login' text box
-            Keyboard.SendKeys(uILoginEdit, this.ErstellePasswortParams.UILoginEditSendKeys, (ModifierKeys.Alt | ModifierKeys.Control));
+            Keyboard.SendKeys(uILoginEdit1, this.ErstellePasswortParams.UILoginEditSendKeys, (ModifierKeys.Alt | ModifierKeys.Control));
 
-            // Type 'benaja.hunzinger@gmail.com' in 'login' text box
-            uILoginEdit.Text = this.ErstellePasswortParams.UILoginEditText1;
+            // Type 'benaja@gmail.com' in 'login' text box
+            uILoginEdit2.Text = this.ErstellePasswortParams.UILoginEditText1;
 
-            // Select 'Websiten' in 'kategorie' combo box
+            // Select 'Webseiten' in 'kategorie' combo box
             uIKategorieComboBox.SelectedItem = this.ErstellePasswortParams.UIKategorieComboBoxSelectedItem;
 
-            // Select '21-Jun-2018' in 'ablaufdatum' date picker
+            // Select '14-Jun-2018' in 'ablaufdatum' date picker
             uIAblaufdatumDatePicker.DateAsString = this.ErstellePasswortParams.UIAblaufdatumDatePickerDateAsString;
 
             // Click 'new_passwort' text box
-            Mouse.Click(uINew_passwortEdit, new Point(20, 13));
+            Mouse.Click(uINew_passwortEdit, new Point(24, 15));
 
             // Type '********' in 'new_passwort' text box
-            Keyboard.SendKeys(uINew_passwortEdit, this.ErstellePasswortParams.UINew_passwortEditSendKeys, true);
+            Keyboard.SendKeys(uINew_passwortEdit1, this.ErstellePasswortParams.UINew_passwortEditSendKeys, true);
 
             // Click 'repeat_password' text box
-            Mouse.Click(uIRepeat_passwordEdit, new Point(14, 11));
+            Mouse.Click(uIRepeat_passwordEdit, new Point(28, 8));
 
             // Type '********' in 'repeat_password' text box
-            Keyboard.SendKeys(uIRepeat_passwordEdit, this.ErstellePasswortParams.UIRepeat_passwordEditSendKeys, true);
+            Keyboard.SendKeys(uIRepeat_passwordEdit1, this.ErstellePasswortParams.UIRepeat_passwordEditSendKeys, true);
 
             // Click 'Speichern' button
-            Mouse.Click(uISpeichernButton, new Point(22, 13));
+            Mouse.Click(uISpeichernButton, new Point(20, 19));
 
-            // Click 'Websiten' button
-            Mouse.Click(uIWebsitenButton, new Point(118, 17));
+            // Click 'Webseiten' button
+            Mouse.Click(uIWebseitenButton, new Point(94, 13));
 
             // Click 'www.google.ch' label
-            Mouse.Click(uIWwwgooglechText, new Point(66, 11));
+            Mouse.Click(uIWwwgooglechText, new Point(76, 10));
 
             // Click 'Passwort anzeigen' button
-            Mouse.Click(uIPasswortanzeigenButton, new Point(77, 18));
+            Mouse.Click(uIPasswortanzeigenButton, new Point(71, 13));
 
             // Click '&Ja' button
-            Mouse.Click(uIJAButton, new Point(37, 4));
+            Mouse.Click(uIJAButton, new Point(38, 15));
+        }
+        
+        /// <summary>
+        /// PrueffePasswort - Use 'PrueffePasswortExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void PrueffePasswort()
+        {
+            #region Variable Declarations
+            WinText uIIhrPasswortlautetgibText = this.UIPasswortWindow.UIIhrPasswortlautetgibWindow.UIIhrPasswortlautetgibText;
+            #endregion
+
+            // Verify that the 'Name' property of 'Ihr Passwort lautet: gibbiX12345' label equals 'Ihr Passwort lautet: gibbiX12345'
+            Assert.AreEqual(this.PrueffePasswortExpectedValues.UIIhrPasswortlautetgibTextName, uIIhrPasswortlautetgibText.Name);
         }
         
         /// <summary>
@@ -196,74 +156,77 @@ namespace CodedUITestProject1
         {
             #region Variable Declarations
             WinButton uIOKButton = this.UIPasswortWindow.UIOKWindow.UIOKButton;
-            WpfButton uIWebsitenButton = this.UIMainWindowWindow.UIWebsitenButton;
-            WpfText uIWwwgooglechText = this.UIMainWindowWindow.UIItemCustom1.UIPasswoerterTable.UIItem1Row.UIWwwgooglechCell.UIWwwgooglechText;
-            WpfButton uIPasswortändernButton = this.UIMainWindowWindow.UIItemCustom.UIPasswortändernButton;
+            WpfButton uIWebseitenButton = this.UIMainWindowWindow.UIWebseitenButton;
+            WpfText uIWwwgooglechText = this.UIMainWindowWindow.UIItemCustom13.UIPasswoerterTable.UIItem1Row.UIWwwgooglechCell.UIWwwgooglechText;
+            WpfButton uIPasswortändernButton = this.UIMainWindowWindow.UIItemCustom1.UIPasswortändernButton;
             WinButton uIJAButton = this.UIInformationWindow.UIJAWindow.UIJAButton;
-            WpfEdit uINew_passwortEdit = this.UIMainWindowWindow.UIItemCustom.UINew_passwortEdit;
-            WpfEdit uIRepeat_passwordEdit = this.UIMainWindowWindow.UIItemCustom.UIRepeat_passwordEdit;
-            WpfButton uISpeichernButton = this.UIMainWindowWindow.UIItemCustom.UISpeichernButton;
-            WpfText uIWwwgooglechText1 = this.UIMainWindowWindow.UIItemCustom22.UIPasswoerterTable.UIItem1Row.UIWwwgooglechCell.UIWwwgooglechText;
-            WpfButton uIPasswortanzeigenButton = this.UIMainWindowWindow.UIItemCustom21.UIPasswortanzeigenButton;
+            WpfEdit uINew_passwortEdit = this.UIMainWindowWindow.UIItemCustom1.UINew_passwortEdit;
+            WpfEdit uIRepeat_passwordEdit = this.UIMainWindowWindow.UIItemCustom1.UIRepeat_passwordEdit;
+            WpfButton uISpeichernButton = this.UIMainWindowWindow.UIItemCustom1.UISpeichernButton;
+            WpfText uIWwwgooglechText1 = this.UIMainWindowWindow.UIItemCustom21.UIPasswoerterTable.UIItem1Row.UIWwwgooglechCell.UIWwwgooglechText;
+            WpfButton uIPasswortanzeigenButton = this.UIMainWindowWindow.UIItemCustom2.UIPasswortanzeigenButton;
             #endregion
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton, new Point(60, 12));
+            Mouse.Click(uIOKButton, new Point(38, 8));
 
-            // Click 'Websiten' button
-            Mouse.Click(uIWebsitenButton, new Point(122, 11));
+            // Click 'Webseiten' button
+            Mouse.Click(uIWebseitenButton, new Point(156, 9));
 
             // Click 'www.google.ch' label
-            Mouse.Click(uIWwwgooglechText, new Point(46, 10));
+            Mouse.Click(uIWwwgooglechText, new Point(135, 9));
 
             // Click 'Passwort ändern' button
-            Mouse.Click(uIPasswortändernButton, new Point(35, 16));
+            Mouse.Click(uIPasswortändernButton, new Point(37, 16));
 
             // Click '&Ja' button
-            Mouse.Click(uIJAButton, new Point(15, 4));
+            Mouse.Click(uIJAButton, new Point(62, 12));
 
             // Click 'new_passwort' text box
-            Mouse.Click(uINew_passwortEdit, new Point(18, 10));
+            Mouse.Click(uINew_passwortEdit, new Point(19, 18));
 
             // Type '********' in 'new_passwort' text box
             Keyboard.SendKeys(uINew_passwortEdit, this.EditPasswortParams.UINew_passwortEditSendKeys, true);
+
+            // Click 'repeat_password' text box
+            Mouse.Click(uIRepeat_passwordEdit, new Point(16, 8));
 
             // Type '********' in 'repeat_password' text box
             Keyboard.SendKeys(uIRepeat_passwordEdit, this.EditPasswortParams.UIRepeat_passwordEditSendKeys, true);
 
             // Click 'Speichern' button
-            Mouse.Click(uISpeichernButton, new Point(43, 11));
+            Mouse.Click(uISpeichernButton, new Point(30, 8));
 
-            // Click 'Websiten' button
-            Mouse.Click(uIWebsitenButton, new Point(163, 14));
+            // Click 'Webseiten' button
+            Mouse.Click(uIWebseitenButton, new Point(118, 15));
 
             // Click 'www.google.ch' label
-            Mouse.Click(uIWwwgooglechText1, new Point(72, 6));
+            Mouse.Click(uIWwwgooglechText1, new Point(79, 6));
 
             // Click 'Passwort anzeigen' button
-            Mouse.Click(uIPasswortanzeigenButton, new Point(39, 19));
+            Mouse.Click(uIPasswortanzeigenButton, new Point(89, 18));
 
             // Click '&Ja' button
-            Mouse.Click(uIJAButton, new Point(28, 11));
+            Mouse.Click(uIJAButton, new Point(35, 5));
         }
         
         /// <summary>
-        /// HidePasswort
+        /// PrueffePasswortNachEdit - Use 'PrueffePasswortNachEditExpectedValues' to pass parameters into this method.
         /// </summary>
-        public void HidePasswort()
+        public void PrueffePasswortNachEdit()
         {
             #region Variable Declarations
-            WinButton uIOKButton = this.UIPasswortWindow.UIOKWindow.UIOKButton;
+            WinText uIIhrPasswortlautetgibText1 = this.UIPasswortWindow.UIIhrPasswortlautetgibWindow.UIIhrPasswortlautetgibText1;
             #endregion
 
-            // Click 'OK' button
-            Mouse.Click(uIOKButton, new Point(60, 7));
+            // Verify that the 'Name' property of 'Ihr Passwort lautet: gibbiX' label equals 'Ihr Passwort lautet: gibbiX'
+            Assert.AreEqual(this.PrueffePasswortNachEditExpectedValues.UIIhrPasswortlautetgibText1Name, uIIhrPasswortlautetgibText1.Name);
         }
         
         /// <summary>
-        /// sucheNachNichtExistierendem - Use 'sucheNachNichtExistierendemParams' to pass parameters into this method.
+        /// SucheNachNichtVorhandenem - Use 'SucheNachNichtVorhandenemParams' to pass parameters into this method.
         /// </summary>
-        public void sucheNachNichtExistierendem()
+        public void SucheNachNichtVorhandenem()
         {
             #region Variable Declarations
             WinButton uIOKButton = this.UIPasswortWindow.UIOKWindow.UIOKButton;
@@ -272,69 +235,29 @@ namespace CodedUITestProject1
             #endregion
 
             // Click 'OK' button
-            Mouse.Click(uIOKButton, new Point(53, 15));
+            Mouse.Click(uIOKButton, new Point(41, 12));
 
             // Type 'sdf' in 'search_textbox' text box
-            uISearch_textboxEdit.Text = this.sucheNachNichtExistierendemParams.UISearch_textboxEditText;
+            uISearch_textboxEdit.Text = this.SucheNachNichtVorhandenemParams.UISearch_textboxEditText;
 
             // Click 'Suchen' button
-            Mouse.Click(uISuchenButton, new Point(29, 22));
+            Mouse.Click(uISuchenButton, new Point(26, 20));
         }
         
         /// <summary>
-        /// prueffePasswort - Use 'prueffePasswortExpectedValues' to pass parameters into this method.
+        /// ErgebnisNachNichtVorhandenem - Use 'ErgebnisNachNichtVorhandenemExpectedValues' to pass parameters into this method.
         /// </summary>
-        public void prueffePasswort()
+        public void ErgebnisNachNichtVorhandenem()
         {
             #region Variable Declarations
-            WinText uIIhrPasswortlautetgibText = this.UIPasswortWindow.UIIhrPasswortlautetgibWindow.UIIhrPasswortlautetgibText;
-            #endregion
-
-            // Verify that the 'Name' property of 'Ihr Passwort lautet: gibbiX12345' label equals 'Ihr Passwort lautet: gibbiX12345'
-            Assert.AreEqual(this.prueffePasswortExpectedValues.UIIhrPasswortlautetgibTextName, uIIhrPasswortlautetgibText.Name, "passwort stimmt nicht überein");
-        }
-        
-        /// <summary>
-        /// prueffePasswortNachAenderung - Use 'prueffePasswortNachAenderungExpectedValues' to pass parameters into this method.
-        /// </summary>
-        public void prueffePasswortNachAenderung()
-        {
-            #region Variable Declarations
-            WinText uIIhrPasswortlautetgibText2 = this.UIPasswortWindow.UIIhrPasswortlautetgibWindow.UIIhrPasswortlautetgibText2;
-            #endregion
-
-            // Verify that the 'Name' property of 'Ihr Passwort lautet: gibbiX1' label equals 'Ihr Passwort lautet: gibbiX1'
-            Assert.AreEqual(this.prueffePasswortNachAenderungExpectedValues.UIIhrPasswortlautetgibText2Name, uIIhrPasswortlautetgibText2.Name, "passwort änderung wurde nicht übernommen");
-        }
-        
-        /// <summary>
-        /// prueffeAnzahlErgebnisse - Use 'prueffeAnzahlErgebnisseExpectedValues' to pass parameters into this method.
-        /// </summary>
-        public void prueffeAnzahlErgebnisse()
-        {
-            #region Variable Declarations
-            WpfText uIAnzahlErgebnisse0Text1 = this.UIMainWindowWindow.UIItemCustom4.UIAnzahlErgebnisse0Text.UIAnzahlErgebnisse0Text1;
+            WpfText uIAnzahlErgebnisse0Text1 = this.UIMainWindowWindow.UIItemCustom14.UIAnzahlErgebnisse0Text.UIAnzahlErgebnisse0Text1;
             #endregion
 
             // Verify that the 'Name' property of 'Anzahl Ergebnisse: 0' label equals 'Anzahl Ergebnisse: 0'
-            Assert.AreEqual(this.prueffeAnzahlErgebnisseExpectedValues.UIAnzahlErgebnisse0Text1Name, uIAnzahlErgebnisse0Text1.Name, "ergebnisse sind nicht = 0");
+            Assert.AreEqual(this.ErgebnisNachNichtVorhandenemExpectedValues.UIAnzahlErgebnisse0Text1Name, uIAnzahlErgebnisse0Text1.Name);
         }
-        
-        
         
         #region Properties
-        public virtual CreateNewPasswortParams CreateNewPasswortParams
-        {
-            get
-            {
-                if ((this.mCreateNewPasswortParams == null))
-                {
-                    this.mCreateNewPasswortParams = new CreateNewPasswortParams();
-                }
-                return this.mCreateNewPasswortParams;
-            }
-        }
-        
         public virtual ErstelleKategorieParams ErstelleKategorieParams
         {
             get
@@ -359,6 +282,18 @@ namespace CodedUITestProject1
             }
         }
         
+        public virtual PrueffePasswortExpectedValues PrueffePasswortExpectedValues
+        {
+            get
+            {
+                if ((this.mPrueffePasswortExpectedValues == null))
+                {
+                    this.mPrueffePasswortExpectedValues = new PrueffePasswortExpectedValues();
+                }
+                return this.mPrueffePasswortExpectedValues;
+            }
+        }
+        
         public virtual EditPasswortParams EditPasswortParams
         {
             get
@@ -371,51 +306,39 @@ namespace CodedUITestProject1
             }
         }
         
-        public virtual sucheNachNichtExistierendemParams sucheNachNichtExistierendemParams
+        public virtual PrueffePasswortNachEditExpectedValues PrueffePasswortNachEditExpectedValues
         {
             get
             {
-                if ((this.msucheNachNichtExistierendemParams == null))
+                if ((this.mPrueffePasswortNachEditExpectedValues == null))
                 {
-                    this.msucheNachNichtExistierendemParams = new sucheNachNichtExistierendemParams();
+                    this.mPrueffePasswortNachEditExpectedValues = new PrueffePasswortNachEditExpectedValues();
                 }
-                return this.msucheNachNichtExistierendemParams;
+                return this.mPrueffePasswortNachEditExpectedValues;
             }
         }
         
-        public virtual prueffePasswortExpectedValues prueffePasswortExpectedValues
+        public virtual SucheNachNichtVorhandenemParams SucheNachNichtVorhandenemParams
         {
             get
             {
-                if ((this.mprueffePasswortExpectedValues == null))
+                if ((this.mSucheNachNichtVorhandenemParams == null))
                 {
-                    this.mprueffePasswortExpectedValues = new prueffePasswortExpectedValues();
+                    this.mSucheNachNichtVorhandenemParams = new SucheNachNichtVorhandenemParams();
                 }
-                return this.mprueffePasswortExpectedValues;
+                return this.mSucheNachNichtVorhandenemParams;
             }
         }
         
-        public virtual prueffePasswortNachAenderungExpectedValues prueffePasswortNachAenderungExpectedValues
+        public virtual ErgebnisNachNichtVorhandenemExpectedValues ErgebnisNachNichtVorhandenemExpectedValues
         {
             get
             {
-                if ((this.mprueffePasswortNachAenderungExpectedValues == null))
+                if ((this.mErgebnisNachNichtVorhandenemExpectedValues == null))
                 {
-                    this.mprueffePasswortNachAenderungExpectedValues = new prueffePasswortNachAenderungExpectedValues();
+                    this.mErgebnisNachNichtVorhandenemExpectedValues = new ErgebnisNachNichtVorhandenemExpectedValues();
                 }
-                return this.mprueffePasswortNachAenderungExpectedValues;
-            }
-        }
-        
-        public virtual prueffeAnzahlErgebnisseExpectedValues prueffeAnzahlErgebnisseExpectedValues
-        {
-            get
-            {
-                if ((this.mprueffeAnzahlErgebnisseExpectedValues == null))
-                {
-                    this.mprueffeAnzahlErgebnisseExpectedValues = new prueffeAnzahlErgebnisseExpectedValues();
-                }
-                return this.mprueffeAnzahlErgebnisseExpectedValues;
+                return this.mErgebnisNachNichtVorhandenemExpectedValues;
             }
         }
         
@@ -440,18 +363,6 @@ namespace CodedUITestProject1
                     this.mUIMainWindowWindow = new UIMainWindowWindow();
                 }
                 return this.mUIMainWindowWindow;
-            }
-        }
-        
-        public UIMainWindowWindow1 UIMainWindowWindow1
-        {
-            get
-            {
-                if ((this.mUIMainWindowWindow1 == null))
-                {
-                    this.mUIMainWindowWindow1 = new UIMainWindowWindow1();
-                }
-                return this.mUIMainWindowWindow1;
             }
         }
         
@@ -481,86 +392,27 @@ namespace CodedUITestProject1
         #endregion
         
         #region Fields
-        private CreateNewPasswortParams mCreateNewPasswortParams;
-        
         private ErstelleKategorieParams mErstelleKategorieParams;
         
         private ErstellePasswortParams mErstellePasswortParams;
         
+        private PrueffePasswortExpectedValues mPrueffePasswortExpectedValues;
+        
         private EditPasswortParams mEditPasswortParams;
         
-        private sucheNachNichtExistierendemParams msucheNachNichtExistierendemParams;
+        private PrueffePasswortNachEditExpectedValues mPrueffePasswortNachEditExpectedValues;
         
-        private prueffePasswortExpectedValues mprueffePasswortExpectedValues;
+        private SucheNachNichtVorhandenemParams mSucheNachNichtVorhandenemParams;
         
-        private prueffePasswortNachAenderungExpectedValues mprueffePasswortNachAenderungExpectedValues;
-        
-        private prueffeAnzahlErgebnisseExpectedValues mprueffeAnzahlErgebnisseExpectedValues;
+        private ErgebnisNachNichtVorhandenemExpectedValues mErgebnisNachNichtVorhandenemExpectedValues;
         
         private UIDebugWindow mUIDebugWindow;
         
         private UIMainWindowWindow mUIMainWindowWindow;
         
-        private UIMainWindowWindow1 mUIMainWindowWindow1;
-        
         private UIInformationWindow mUIInformationWindow;
         
         private UIPasswortWindow mUIPasswortWindow;
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'CreateNewPasswort'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class CreateNewPasswortParams
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Type 'www.google.ch' in 'zielsystem' text box
-        /// </summary>
-        public string UIZielsystemEditText = "www.google.ch";
-        
-        /// <summary>
-        /// Type '{Tab}' in 'zielsystem' text box
-        /// </summary>
-        public string UIZielsystemEditSendKeys = "{Tab}";
-        
-        /// <summary>
-        /// Type 'benaja' in 'login' text box
-        /// </summary>
-        public string UILoginEditText = "benaja";
-        
-        /// <summary>
-        /// Type 'Alt, Control + 2' in 'login' text box
-        /// </summary>
-        public string UILoginEditSendKeys = "2";
-        
-        /// <summary>
-        /// Type 'benaja@gmail.com' in 'login' text box
-        /// </summary>
-        public string UILoginEditText1 = "benaja@gmail.com";
-        
-        /// <summary>
-        /// Select 'Kategorie 1' in 'kategorie' combo box
-        /// </summary>
-        public string UIKategorieComboBoxSelectedItem = "Kategorie 1";
-        
-        /// <summary>
-        /// Select '07-Jun-2018' in 'ablaufdatum' date picker
-        /// </summary>
-        public string UIAblaufdatumDatePickerDateAsString = "07-Jun-2018";
-        
-        /// <summary>
-        /// Type '********' in 'new_passwort' text box
-        /// </summary>
-        public string UINew_passwortEditSendKeys = "e3QkkbzyPweBgvn4lNh68+NlZAxTPu91tx2rTN+GB7mtZri0rcm9vg==";
-        
-        /// <summary>
-        /// Type '********' in 'repeat_password' text box
-        /// </summary>
-        public string UIRepeat_passwordEditSendKeys = "e3QkkbzyPweBgvn4lNh688jt+M1cMBf01jSeYc2glhJEvGceQxXRxw==";
         #endregion
     }
     
@@ -573,9 +425,9 @@ namespace CodedUITestProject1
         
         #region Fields
         /// <summary>
-        /// Type 'Websiten' in 'name' text box
+        /// Type 'Webseiten' in 'name' text box
         /// </summary>
-        public string UINameEditText = "Websiten";
+        public string UINameEditText = "Webseiten";
         #endregion
     }
     
@@ -593,9 +445,9 @@ namespace CodedUITestProject1
         public string UIZielsystemEditText = "www.google.ch";
         
         /// <summary>
-        /// Type 'benaja.hunzinger' in 'login' text box
+        /// Type 'benaja' in 'login' text box
         /// </summary>
-        public string UILoginEditText = "benaja.hunzinger";
+        public string UILoginEditText = "benaja";
         
         /// <summary>
         /// Type 'Alt, Control + 2' in 'login' text box
@@ -603,19 +455,19 @@ namespace CodedUITestProject1
         public string UILoginEditSendKeys = "2";
         
         /// <summary>
-        /// Type 'benaja.hunzinger@gmail.com' in 'login' text box
+        /// Type 'benaja@gmail.com' in 'login' text box
         /// </summary>
-        public string UILoginEditText1 = "benaja.hunzinger@gmail.com";
+        public string UILoginEditText1 = "benaja@gmail.com";
         
         /// <summary>
-        /// Select 'Websiten' in 'kategorie' combo box
+        /// Select 'Webseiten' in 'kategorie' combo box
         /// </summary>
-        public string UIKategorieComboBoxSelectedItem = "Websiten";
+        public string UIKategorieComboBoxSelectedItem = "Webseiten";
         
         /// <summary>
-        /// Select '21-Jun-2018' in 'ablaufdatum' date picker
+        /// Select '14-Jun-2018' in 'ablaufdatum' date picker
         /// </summary>
-        public string UIAblaufdatumDatePickerDateAsString = "21-Jun-2018";
+        public string UIAblaufdatumDatePickerDateAsString = "14-Jun-2018";
         
         /// <summary>
         /// Type '********' in 'new_passwort' text box
@@ -630,45 +482,10 @@ namespace CodedUITestProject1
     }
     
     /// <summary>
-    /// Parameters to be passed into 'EditPasswort'
+    /// Parameters to be passed into 'PrueffePasswort'
     /// </summary>
     [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class EditPasswortParams
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Type '********' in 'new_passwort' text box
-        /// </summary>
-        public string UINew_passwortEditSendKeys = "e3QkkbzyPweBgvn4lNh68/htFK/KftcDQaEHGLk5g4nJPDgln5w07g==";
-        
-        /// <summary>
-        /// Type '********' in 'repeat_password' text box
-        /// </summary>
-        public string UIRepeat_passwordEditSendKeys = "e3QkkbzyPweBgvn4lNh680IfcrRjd6lQDg/oFYFIy74=";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'sucheNachNichtExistierendem'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class sucheNachNichtExistierendemParams
-    {
-        
-        #region Fields
-        /// <summary>
-        /// Type 'sdf' in 'search_textbox' text box
-        /// </summary>
-        public string UISearch_textboxEditText = "sdf";
-        #endregion
-    }
-    
-    /// <summary>
-    /// Parameters to be passed into 'prueffePasswort'
-    /// </summary>
-    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class prueffePasswortExpectedValues
+    public class PrueffePasswortExpectedValues
     {
         
         #region Fields
@@ -680,25 +497,60 @@ namespace CodedUITestProject1
     }
     
     /// <summary>
-    /// Parameters to be passed into 'prueffePasswortNachAenderung'
+    /// Parameters to be passed into 'EditPasswort'
     /// </summary>
     [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class prueffePasswortNachAenderungExpectedValues
+    public class EditPasswortParams
     {
         
         #region Fields
         /// <summary>
-        /// Verify that the 'Name' property of 'Ihr Passwort lautet: gibbiX1' label equals 'Ihr Passwort lautet: gibbiX1'
+        /// Type '********' in 'new_passwort' text box
         /// </summary>
-        public string UIIhrPasswortlautetgibText2Name = "Ihr Passwort lautet: gibbiX1";
+        public string UINew_passwortEditSendKeys = "e3QkkbzyPweBgvn4lNh680e/pdlCAMrkFlratpxOMo0=";
+        
+        /// <summary>
+        /// Type '********' in 'repeat_password' text box
+        /// </summary>
+        public string UIRepeat_passwordEditSendKeys = "e3QkkbzyPweBgvn4lNh680e/pdlCAMrkFlratpxOMo0=";
         #endregion
     }
     
     /// <summary>
-    /// Parameters to be passed into 'prueffeAnzahlErgebnisse'
+    /// Parameters to be passed into 'PrueffePasswortNachEdit'
     /// </summary>
     [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class prueffeAnzahlErgebnisseExpectedValues
+    public class PrueffePasswortNachEditExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'Name' property of 'Ihr Passwort lautet: gibbiX' label equals 'Ihr Passwort lautet: gibbiX'
+        /// </summary>
+        public string UIIhrPasswortlautetgibText1Name = "Ihr Passwort lautet: gibbiX";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'SucheNachNichtVorhandenem'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class SucheNachNichtVorhandenemParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'sdf' in 'search_textbox' text box
+        /// </summary>
+        public string UISearch_textboxEditText = "sdf";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'ErgebnisNachNichtVorhandenem'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class ErgebnisNachNichtVorhandenemExpectedValues
     {
         
         #region Fields
@@ -840,46 +692,6 @@ namespace CodedUITestProject1
             }
         }
         
-        public UIItemCustom UIItemCustom
-        {
-            get
-            {
-                if ((this.mUIItemCustom == null))
-                {
-                    this.mUIItemCustom = new UIItemCustom(this);
-                }
-                return this.mUIItemCustom;
-            }
-        }
-        
-        public WpfButton UIKategorie1Button
-        {
-            get
-            {
-                if ((this.mUIKategorie1Button == null))
-                {
-                    this.mUIKategorie1Button = new WpfButton(this);
-                    #region Search Criteria
-                    this.mUIKategorie1Button.SearchProperties[WpfButton.PropertyNames.Name] = "Kategorie 1";
-                    this.mUIKategorie1Button.WindowTitles.Add("MainWindow");
-                    #endregion
-                }
-                return this.mUIKategorie1Button;
-            }
-        }
-        
-        public UIItemCustom1 UIItemCustom1
-        {
-            get
-            {
-                if ((this.mUIItemCustom1 == null))
-                {
-                    this.mUIItemCustom1 = new UIItemCustom1(this);
-                }
-                return this.mUIItemCustom1;
-            }
-        }
-        
         public WpfButton UIKategorieerstellenButton
         {
             get
@@ -893,6 +705,30 @@ namespace CodedUITestProject1
                     #endregion
                 }
                 return this.mUIKategorieerstellenButton;
+            }
+        }
+        
+        public UIItemCustom UIItemCustom
+        {
+            get
+            {
+                if ((this.mUIItemCustom == null))
+                {
+                    this.mUIItemCustom = new UIItemCustom(this);
+                }
+                return this.mUIItemCustom;
+            }
+        }
+        
+        public UIItemCustom1 UIItemCustom1
+        {
+            get
+            {
+                if ((this.mUIItemCustom1 == null))
+                {
+                    this.mUIItemCustom1 = new UIItemCustom1(this);
+                }
+                return this.mUIItemCustom1;
             }
         }
         
@@ -920,19 +756,139 @@ namespace CodedUITestProject1
             }
         }
         
-        public WpfButton UIWebsitenButton
+        public UIItemCustom4 UIItemCustom4
         {
             get
             {
-                if ((this.mUIWebsitenButton == null))
+                if ((this.mUIItemCustom4 == null))
                 {
-                    this.mUIWebsitenButton = new WpfButton(this);
+                    this.mUIItemCustom4 = new UIItemCustom4(this);
+                }
+                return this.mUIItemCustom4;
+            }
+        }
+        
+        public UIItemCustom5 UIItemCustom5
+        {
+            get
+            {
+                if ((this.mUIItemCustom5 == null))
+                {
+                    this.mUIItemCustom5 = new UIItemCustom5(this);
+                }
+                return this.mUIItemCustom5;
+            }
+        }
+        
+        public UIItemCustom6 UIItemCustom6
+        {
+            get
+            {
+                if ((this.mUIItemCustom6 == null))
+                {
+                    this.mUIItemCustom6 = new UIItemCustom6(this);
+                }
+                return this.mUIItemCustom6;
+            }
+        }
+        
+        public UIItemCustom7 UIItemCustom7
+        {
+            get
+            {
+                if ((this.mUIItemCustom7 == null))
+                {
+                    this.mUIItemCustom7 = new UIItemCustom7(this);
+                }
+                return this.mUIItemCustom7;
+            }
+        }
+        
+        public UIItemCustom8 UIItemCustom8
+        {
+            get
+            {
+                if ((this.mUIItemCustom8 == null))
+                {
+                    this.mUIItemCustom8 = new UIItemCustom8(this);
+                }
+                return this.mUIItemCustom8;
+            }
+        }
+        
+        public UIItemCustom9 UIItemCustom9
+        {
+            get
+            {
+                if ((this.mUIItemCustom9 == null))
+                {
+                    this.mUIItemCustom9 = new UIItemCustom9(this);
+                }
+                return this.mUIItemCustom9;
+            }
+        }
+        
+        public UIItemCustom10 UIItemCustom10
+        {
+            get
+            {
+                if ((this.mUIItemCustom10 == null))
+                {
+                    this.mUIItemCustom10 = new UIItemCustom10(this);
+                }
+                return this.mUIItemCustom10;
+            }
+        }
+        
+        public UIItemCustom11 UIItemCustom11
+        {
+            get
+            {
+                if ((this.mUIItemCustom11 == null))
+                {
+                    this.mUIItemCustom11 = new UIItemCustom11(this);
+                }
+                return this.mUIItemCustom11;
+            }
+        }
+        
+        public UIItemCustom12 UIItemCustom12
+        {
+            get
+            {
+                if ((this.mUIItemCustom12 == null))
+                {
+                    this.mUIItemCustom12 = new UIItemCustom12(this);
+                }
+                return this.mUIItemCustom12;
+            }
+        }
+        
+        public WpfButton UIWebseitenButton
+        {
+            get
+            {
+                if ((this.mUIWebseitenButton == null))
+                {
+                    this.mUIWebseitenButton = new WpfButton(this);
                     #region Search Criteria
-                    this.mUIWebsitenButton.SearchProperties[WpfButton.PropertyNames.Name] = "Websiten";
-                    this.mUIWebsitenButton.WindowTitles.Add("MainWindow");
+                    this.mUIWebseitenButton.SearchProperties[WpfButton.PropertyNames.Name] = "Webseiten";
+                    this.mUIWebseitenButton.WindowTitles.Add("MainWindow");
                     #endregion
                 }
-                return this.mUIWebsitenButton;
+                return this.mUIWebseitenButton;
+            }
+        }
+        
+        public UIItemCustom13 UIItemCustom13
+        {
+            get
+            {
+                if ((this.mUIItemCustom13 == null))
+                {
+                    this.mUIItemCustom13 = new UIItemCustom13(this);
+                }
+                return this.mUIItemCustom13;
             }
         }
         
@@ -980,43 +936,15 @@ namespace CodedUITestProject1
             }
         }
         
-        public UIItemCustom4 UIItemCustom4
+        public UIItemCustom14 UIItemCustom14
         {
             get
             {
-                if ((this.mUIItemCustom4 == null))
+                if ((this.mUIItemCustom14 == null))
                 {
-                    this.mUIItemCustom4 = new UIItemCustom4(this);
+                    this.mUIItemCustom14 = new UIItemCustom14(this);
                 }
-                return this.mUIItemCustom4;
-            }
-        }
-        
-        public UIItemCustom22 UIItemCustom22
-        {
-            get
-            {
-                if ((this.mUIItemCustom22 == null))
-                {
-                    this.mUIItemCustom22 = new UIItemCustom22(this);
-                }
-                return this.mUIItemCustom22;
-            }
-        }
-        
-        public WpfButton UIAbgeloffenePasswörteButton
-        {
-            get
-            {
-                if ((this.mUIAbgeloffenePasswörteButton == null))
-                {
-                    this.mUIAbgeloffenePasswörteButton = new WpfButton(this);
-                    #region Search Criteria
-                    this.mUIAbgeloffenePasswörteButton.SearchProperties[WpfButton.PropertyNames.AutomationId] = "abgeloffene_passwoerter";
-                    this.mUIAbgeloffenePasswörteButton.WindowTitles.Add("MainWindow");
-                    #endregion
-                }
-                return this.mUIAbgeloffenePasswörteButton;
+                return this.mUIItemCustom14;
             }
         }
         #endregion
@@ -1024,19 +952,37 @@ namespace CodedUITestProject1
         #region Fields
         private WpfButton mUINeuButton;
         
+        private WpfButton mUIKategorieerstellenButton;
+        
         private UIItemCustom mUIItemCustom;
         
-        private WpfButton mUIKategorie1Button;
-        
         private UIItemCustom1 mUIItemCustom1;
-        
-        private WpfButton mUIKategorieerstellenButton;
         
         private UIItemCustom2 mUIItemCustom2;
         
         private UIItemCustom3 mUIItemCustom3;
         
-        private WpfButton mUIWebsitenButton;
+        private UIItemCustom4 mUIItemCustom4;
+        
+        private UIItemCustom5 mUIItemCustom5;
+        
+        private UIItemCustom6 mUIItemCustom6;
+        
+        private UIItemCustom7 mUIItemCustom7;
+        
+        private UIItemCustom8 mUIItemCustom8;
+        
+        private UIItemCustom9 mUIItemCustom9;
+        
+        private UIItemCustom10 mUIItemCustom10;
+        
+        private UIItemCustom11 mUIItemCustom11;
+        
+        private UIItemCustom12 mUIItemCustom12;
+        
+        private WpfButton mUIWebseitenButton;
+        
+        private UIItemCustom13 mUIItemCustom13;
         
         private UIItemCustom21 mUIItemCustom21;
         
@@ -1044,11 +990,7 @@ namespace CodedUITestProject1
         
         private WpfButton mUISuchenButton;
         
-        private UIItemCustom4 mUIItemCustom4;
-        
-        private UIItemCustom22 mUIItemCustom22;
-        
-        private WpfButton mUIAbgeloffenePasswörteButton;
+        private UIItemCustom14 mUIItemCustom14;
         #endregion
     }
     
@@ -1057,6 +999,60 @@ namespace CodedUITestProject1
     {
         
         public UIItemCustom(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.EditKategorie";
+            this.WindowTitles.Add("MainWindow");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfEdit UINameEdit
+        {
+            get
+            {
+                if ((this.mUINameEdit == null))
+                {
+                    this.mUINameEdit = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUINameEdit.SearchProperties[WpfEdit.PropertyNames.AutomationId] = "name";
+                    this.mUINameEdit.WindowTitles.Add("MainWindow");
+                    #endregion
+                }
+                return this.mUINameEdit;
+            }
+        }
+        
+        public WpfButton UISpeichernButton
+        {
+            get
+            {
+                if ((this.mUISpeichernButton == null))
+                {
+                    this.mUISpeichernButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUISpeichernButton.SearchProperties[WpfButton.PropertyNames.AutomationId] = "save_button";
+                    this.mUISpeichernButton.WindowTitles.Add("MainWindow");
+                    #endregion
+                }
+                return this.mUISpeichernButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfEdit mUINameEdit;
+        
+        private WpfButton mUISpeichernButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIItemCustom1 : WpfCustom
+    {
+        
+        public UIItemCustom1(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
@@ -1082,51 +1078,19 @@ namespace CodedUITestProject1
             }
         }
         
-        public WpfEdit UILoginEdit
+        public WpfButton UIPasswortändernButton
         {
             get
             {
-                if ((this.mUILoginEdit == null))
+                if ((this.mUIPasswortändernButton == null))
                 {
-                    this.mUILoginEdit = new WpfEdit(this);
+                    this.mUIPasswortändernButton = new WpfButton(this);
                     #region Search Criteria
-                    this.mUILoginEdit.SearchProperties[WpfEdit.PropertyNames.AutomationId] = "login";
-                    this.mUILoginEdit.WindowTitles.Add("MainWindow");
+                    this.mUIPasswortändernButton.SearchProperties[WpfButton.PropertyNames.AutomationId] = "edit_password";
+                    this.mUIPasswortändernButton.WindowTitles.Add("MainWindow");
                     #endregion
                 }
-                return this.mUILoginEdit;
-            }
-        }
-        
-        public WpfComboBox UIKategorieComboBox
-        {
-            get
-            {
-                if ((this.mUIKategorieComboBox == null))
-                {
-                    this.mUIKategorieComboBox = new WpfComboBox(this);
-                    #region Search Criteria
-                    this.mUIKategorieComboBox.SearchProperties[WpfComboBox.PropertyNames.AutomationId] = "kategorie";
-                    this.mUIKategorieComboBox.WindowTitles.Add("MainWindow");
-                    #endregion
-                }
-                return this.mUIKategorieComboBox;
-            }
-        }
-        
-        public WpfDatePicker UIAblaufdatumDatePicker
-        {
-            get
-            {
-                if ((this.mUIAblaufdatumDatePicker == null))
-                {
-                    this.mUIAblaufdatumDatePicker = new WpfDatePicker(this);
-                    #region Search Criteria
-                    this.mUIAblaufdatumDatePicker.SearchProperties[WpfDatePicker.PropertyNames.AutomationId] = "ablaufdatum";
-                    this.mUIAblaufdatumDatePicker.WindowTitles.Add("MainWindow");
-                    #endregion
-                }
-                return this.mUIAblaufdatumDatePicker;
+                return this.mUIPasswortändernButton;
             }
         }
         
@@ -1177,48 +1141,422 @@ namespace CodedUITestProject1
                 return this.mUISpeichernButton;
             }
         }
-        
-        public WpfButton UIPasswortändernButton
-        {
-            get
-            {
-                if ((this.mUIPasswortändernButton == null))
-                {
-                    this.mUIPasswortändernButton = new WpfButton(this);
-                    #region Search Criteria
-                    this.mUIPasswortändernButton.SearchProperties[WpfButton.PropertyNames.AutomationId] = "edit_password";
-                    this.mUIPasswortändernButton.WindowTitles.Add("MainWindow");
-                    #endregion
-                }
-                return this.mUIPasswortändernButton;
-            }
-        }
         #endregion
         
         #region Fields
         private WpfEdit mUIZielsystemEdit;
         
-        private WpfEdit mUILoginEdit;
-        
-        private WpfComboBox mUIKategorieComboBox;
-        
-        private WpfDatePicker mUIAblaufdatumDatePicker;
+        private WpfButton mUIPasswortändernButton;
         
         private WpfEdit mUINew_passwortEdit;
         
         private WpfEdit mUIRepeat_passwordEdit;
         
         private WpfButton mUISpeichernButton;
-        
-        private WpfButton mUIPasswortändernButton;
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class UIItemCustom1 : WpfCustom
+    public class UIItemCustom2 : WpfCustom
     {
         
-        public UIItemCustom1(UITestControl searchLimitContainer) : 
+        public UIItemCustom2(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.Passwort";
+            this.WindowTitles.Add("MainWindow");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfButton UIPasswortanzeigenButton
+        {
+            get
+            {
+                if ((this.mUIPasswortanzeigenButton == null))
+                {
+                    this.mUIPasswortanzeigenButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUIPasswortanzeigenButton.SearchProperties[WpfButton.PropertyNames.AutomationId] = "show_password";
+                    this.mUIPasswortanzeigenButton.WindowTitles.Add("MainWindow");
+                    #endregion
+                }
+                return this.mUIPasswortanzeigenButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfButton mUIPasswortanzeigenButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIItemCustom3 : WpfCustom
+    {
+        
+        public UIItemCustom3(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.Passwort";
+            this.WindowTitles.Add("MainWindow");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfEdit UILoginEdit
+        {
+            get
+            {
+                if ((this.mUILoginEdit == null))
+                {
+                    this.mUILoginEdit = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUILoginEdit.SearchProperties[WpfEdit.PropertyNames.AutomationId] = "login";
+                    this.mUILoginEdit.WindowTitles.Add("MainWindow");
+                    #endregion
+                }
+                return this.mUILoginEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfEdit mUILoginEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIItemCustom4 : WpfCustom
+    {
+        
+        public UIItemCustom4(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.Passwort";
+            this.WindowTitles.Add("MainWindow");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfEdit UILoginEdit
+        {
+            get
+            {
+                if ((this.mUILoginEdit == null))
+                {
+                    this.mUILoginEdit = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUILoginEdit.SearchProperties[WpfEdit.PropertyNames.AutomationId] = "login";
+                    this.mUILoginEdit.WindowTitles.Add("MainWindow");
+                    #endregion
+                }
+                return this.mUILoginEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfEdit mUILoginEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIItemCustom5 : WpfCustom
+    {
+        
+        public UIItemCustom5(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.Passwort";
+            this.WindowTitles.Add("MainWindow");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfEdit UILoginEdit
+        {
+            get
+            {
+                if ((this.mUILoginEdit == null))
+                {
+                    this.mUILoginEdit = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUILoginEdit.SearchProperties[WpfEdit.PropertyNames.AutomationId] = "login";
+                    this.mUILoginEdit.WindowTitles.Add("MainWindow");
+                    #endregion
+                }
+                return this.mUILoginEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfEdit mUILoginEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIItemCustom6 : WpfCustom
+    {
+        
+        public UIItemCustom6(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.Passwort";
+            this.WindowTitles.Add("MainWindow");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfComboBox UIKategorieComboBox
+        {
+            get
+            {
+                if ((this.mUIKategorieComboBox == null))
+                {
+                    this.mUIKategorieComboBox = new WpfComboBox(this);
+                    #region Search Criteria
+                    this.mUIKategorieComboBox.SearchProperties[WpfComboBox.PropertyNames.AutomationId] = "kategorie";
+                    this.mUIKategorieComboBox.WindowTitles.Add("MainWindow");
+                    #endregion
+                }
+                return this.mUIKategorieComboBox;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfComboBox mUIKategorieComboBox;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIItemCustom7 : WpfCustom
+    {
+        
+        public UIItemCustom7(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.Passwort";
+            this.WindowTitles.Add("MainWindow");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfDatePicker UIAblaufdatumDatePicker
+        {
+            get
+            {
+                if ((this.mUIAblaufdatumDatePicker == null))
+                {
+                    this.mUIAblaufdatumDatePicker = new WpfDatePicker(this);
+                    #region Search Criteria
+                    this.mUIAblaufdatumDatePicker.SearchProperties[WpfDatePicker.PropertyNames.AutomationId] = "ablaufdatum";
+                    this.mUIAblaufdatumDatePicker.WindowTitles.Add("MainWindow");
+                    #endregion
+                }
+                return this.mUIAblaufdatumDatePicker;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfDatePicker mUIAblaufdatumDatePicker;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIItemCustom8 : WpfCustom
+    {
+        
+        public UIItemCustom8(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.Passwort";
+            this.WindowTitles.Add("MainWindow");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfEdit UINew_passwortEdit
+        {
+            get
+            {
+                if ((this.mUINew_passwortEdit == null))
+                {
+                    this.mUINew_passwortEdit = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUINew_passwortEdit.SearchProperties[WpfEdit.PropertyNames.AutomationId] = "new_passwort";
+                    this.mUINew_passwortEdit.WindowTitles.Add("MainWindow");
+                    #endregion
+                }
+                return this.mUINew_passwortEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfEdit mUINew_passwortEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIItemCustom9 : WpfCustom
+    {
+        
+        public UIItemCustom9(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.Passwort";
+            this.WindowTitles.Add("MainWindow");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfEdit UINew_passwortEdit
+        {
+            get
+            {
+                if ((this.mUINew_passwortEdit == null))
+                {
+                    this.mUINew_passwortEdit = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUINew_passwortEdit.SearchProperties[WpfEdit.PropertyNames.AutomationId] = "new_passwort";
+                    this.mUINew_passwortEdit.WindowTitles.Add("MainWindow");
+                    #endregion
+                }
+                return this.mUINew_passwortEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfEdit mUINew_passwortEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIItemCustom10 : WpfCustom
+    {
+        
+        public UIItemCustom10(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.Passwort";
+            this.WindowTitles.Add("MainWindow");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfEdit UIRepeat_passwordEdit
+        {
+            get
+            {
+                if ((this.mUIRepeat_passwordEdit == null))
+                {
+                    this.mUIRepeat_passwordEdit = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUIRepeat_passwordEdit.SearchProperties[WpfEdit.PropertyNames.AutomationId] = "repeat_password";
+                    this.mUIRepeat_passwordEdit.WindowTitles.Add("MainWindow");
+                    #endregion
+                }
+                return this.mUIRepeat_passwordEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfEdit mUIRepeat_passwordEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIItemCustom11 : WpfCustom
+    {
+        
+        public UIItemCustom11(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.Passwort";
+            this.WindowTitles.Add("MainWindow");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfEdit UIRepeat_passwordEdit
+        {
+            get
+            {
+                if ((this.mUIRepeat_passwordEdit == null))
+                {
+                    this.mUIRepeat_passwordEdit = new WpfEdit(this);
+                    #region Search Criteria
+                    this.mUIRepeat_passwordEdit.SearchProperties[WpfEdit.PropertyNames.AutomationId] = "repeat_password";
+                    this.mUIRepeat_passwordEdit.WindowTitles.Add("MainWindow");
+                    #endregion
+                }
+                return this.mUIRepeat_passwordEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfEdit mUIRepeat_passwordEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIItemCustom12 : WpfCustom
+    {
+        
+        public UIItemCustom12(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.Passwort";
+            this.WindowTitles.Add("MainWindow");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfButton UISpeichernButton
+        {
+            get
+            {
+                if ((this.mUISpeichernButton == null))
+                {
+                    this.mUISpeichernButton = new WpfButton(this);
+                    #region Search Criteria
+                    this.mUISpeichernButton.SearchProperties[WpfButton.PropertyNames.AutomationId] = "save_button";
+                    this.mUISpeichernButton.WindowTitles.Add("MainWindow");
+                    #endregion
+                }
+                return this.mUISpeichernButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfButton mUISpeichernButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIItemCustom13 : WpfCustom
+    {
+        
+        public UIItemCustom13(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
@@ -1260,18 +1598,6 @@ namespace CodedUITestProject1
         }
         
         #region Properties
-        public UIItem24Row UIItem24Row
-        {
-            get
-            {
-                if ((this.mUIItem24Row == null))
-                {
-                    this.mUIItem24Row = new UIItem24Row(this);
-                }
-                return this.mUIItem24Row;
-            }
-        }
-        
         public UIItem1Row UIItem1Row
         {
             get
@@ -1286,21 +1612,19 @@ namespace CodedUITestProject1
         #endregion
         
         #region Fields
-        private UIItem24Row mUIItem24Row;
-        
         private UIItem1Row mUIItem1Row;
         #endregion
     }
     
     [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class UIItem24Row : WpfRow
+    public class UIItem1Row : WpfRow
     {
         
-        public UIItem24Row(UITestControl searchLimitContainer) : 
+        public UIItem1Row(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
-            this.SearchProperties[WpfRow.PropertyNames.Name] = "24";
+            this.SearchProperties[WpfRow.PropertyNames.Name] = "1";
             this.SearchConfigurations.Add(SearchConfiguration.AlwaysSearch);
             this.WindowTitles.Add("MainWindow");
             #endregion
@@ -1362,10 +1686,74 @@ namespace CodedUITestProject1
     }
     
     [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class UIItem1Row : WpfRow
+    public class UIItemCustom21 : WpfCustom
     {
         
-        public UIItem1Row(UITestControl searchLimitContainer) : 
+        public UIItemCustom21(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.Kategorie";
+            this.WindowTitles.Add("MainWindow");
+            #endregion
+        }
+        
+        #region Properties
+        public UIPasswoerterTable1 UIPasswoerterTable
+        {
+            get
+            {
+                if ((this.mUIPasswoerterTable == null))
+                {
+                    this.mUIPasswoerterTable = new UIPasswoerterTable1(this);
+                }
+                return this.mUIPasswoerterTable;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIPasswoerterTable1 mUIPasswoerterTable;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIPasswoerterTable1 : WpfTable
+    {
+        
+        public UIPasswoerterTable1(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfTable.PropertyNames.AutomationId] = "passwoerter";
+            this.WindowTitles.Add("MainWindow");
+            #endregion
+        }
+        
+        #region Properties
+        public UIItem1Row1 UIItem1Row
+        {
+            get
+            {
+                if ((this.mUIItem1Row == null))
+                {
+                    this.mUIItem1Row = new UIItem1Row1(this);
+                }
+                return this.mUIItem1Row;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIItem1Row1 mUIItem1Row;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIItem1Row1 : WpfRow
+    {
+        
+        public UIItem1Row1(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
@@ -1431,136 +1819,10 @@ namespace CodedUITestProject1
     }
     
     [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class UIItemCustom2 : WpfCustom
+    public class UIItemCustom14 : WpfCustom
     {
         
-        public UIItemCustom2(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.EditKategorie";
-            this.WindowTitles.Add("MainWindow");
-            #endregion
-        }
-        
-        #region Properties
-        public WpfEdit UINameEdit
-        {
-            get
-            {
-                if ((this.mUINameEdit == null))
-                {
-                    this.mUINameEdit = new WpfEdit(this);
-                    #region Search Criteria
-                    this.mUINameEdit.SearchProperties[WpfEdit.PropertyNames.AutomationId] = "name";
-                    this.mUINameEdit.WindowTitles.Add("MainWindow");
-                    #endregion
-                }
-                return this.mUINameEdit;
-            }
-        }
-        
-        public WpfButton UISpeichernButton
-        {
-            get
-            {
-                if ((this.mUISpeichernButton == null))
-                {
-                    this.mUISpeichernButton = new WpfButton(this);
-                    #region Search Criteria
-                    this.mUISpeichernButton.SearchProperties[WpfButton.PropertyNames.AutomationId] = "save_button";
-                    this.mUISpeichernButton.WindowTitles.Add("MainWindow");
-                    #endregion
-                }
-                return this.mUISpeichernButton;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WpfEdit mUINameEdit;
-        
-        private WpfButton mUISpeichernButton;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class UIItemCustom3 : WpfCustom
-    {
-        
-        public UIItemCustom3(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.EditKategorie";
-            this.WindowTitles.Add("MainWindow");
-            #endregion
-        }
-        
-        #region Properties
-        public WpfButton UISpeichernButton
-        {
-            get
-            {
-                if ((this.mUISpeichernButton == null))
-                {
-                    this.mUISpeichernButton = new WpfButton(this);
-                    #region Search Criteria
-                    this.mUISpeichernButton.SearchProperties[WpfButton.PropertyNames.AutomationId] = "save_button";
-                    this.mUISpeichernButton.WindowTitles.Add("MainWindow");
-                    #endregion
-                }
-                return this.mUISpeichernButton;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WpfButton mUISpeichernButton;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class UIItemCustom21 : WpfCustom
-    {
-        
-        public UIItemCustom21(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.Passwort";
-            this.WindowTitles.Add("MainWindow");
-            #endregion
-        }
-        
-        #region Properties
-        public WpfButton UIPasswortanzeigenButton
-        {
-            get
-            {
-                if ((this.mUIPasswortanzeigenButton == null))
-                {
-                    this.mUIPasswortanzeigenButton = new WpfButton(this);
-                    #region Search Criteria
-                    this.mUIPasswortanzeigenButton.SearchProperties[WpfButton.PropertyNames.AutomationId] = "show_password";
-                    this.mUIPasswortanzeigenButton.WindowTitles.Add("MainWindow");
-                    #endregion
-                }
-                return this.mUIPasswortanzeigenButton;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WpfButton mUIPasswortanzeigenButton;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class UIItemCustom4 : WpfCustom
-    {
-        
-        public UIItemCustom4(UITestControl searchLimitContainer) : 
+        public UIItemCustom14(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
@@ -1570,18 +1832,6 @@ namespace CodedUITestProject1
         }
         
         #region Properties
-        public UIPasswoerterTable1 UIPasswoerterTable
-        {
-            get
-            {
-                if ((this.mUIPasswoerterTable == null))
-                {
-                    this.mUIPasswoerterTable = new UIPasswoerterTable1(this);
-                }
-                return this.mUIPasswoerterTable;
-            }
-        }
-        
         public UIAnzahlErgebnisse0Text UIAnzahlErgebnisse0Text
         {
             get
@@ -1596,110 +1846,7 @@ namespace CodedUITestProject1
         #endregion
         
         #region Fields
-        private UIPasswoerterTable1 mUIPasswoerterTable;
-        
         private UIAnzahlErgebnisse0Text mUIAnzahlErgebnisse0Text;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class UIPasswoerterTable1 : WpfTable
-    {
-        
-        public UIPasswoerterTable1(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfTable.PropertyNames.AutomationId] = "passwoerter";
-            this.WindowTitles.Add("MainWindow");
-            #endregion
-        }
-        
-        #region Properties
-        public UIItem1Row1 UIItem1Row
-        {
-            get
-            {
-                if ((this.mUIItem1Row == null))
-                {
-                    this.mUIItem1Row = new UIItem1Row1(this);
-                }
-                return this.mUIItem1Row;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIItem1Row1 mUIItem1Row;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class UIItem1Row1 : WpfRow
-    {
-        
-        public UIItem1Row1(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfRow.PropertyNames.Name] = "1";
-            this.SearchConfigurations.Add(SearchConfiguration.AlwaysSearch);
-            this.WindowTitles.Add("MainWindow");
-            #endregion
-        }
-        
-        #region Properties
-        public UIWwwgooglechCell2 UIWwwgooglechCell
-        {
-            get
-            {
-                if ((this.mUIWwwgooglechCell == null))
-                {
-                    this.mUIWwwgooglechCell = new UIWwwgooglechCell2(this);
-                }
-                return this.mUIWwwgooglechCell;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIWwwgooglechCell2 mUIWwwgooglechCell;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class UIWwwgooglechCell2 : WpfCell
-    {
-        
-        public UIWwwgooglechCell2(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfCell.PropertyNames.ColumnHeader] = "Zielsystem";
-            this.WindowTitles.Add("MainWindow");
-            #endregion
-        }
-        
-        #region Properties
-        public WpfText UIWwwgooglechText
-        {
-            get
-            {
-                if ((this.mUIWwwgooglechText == null))
-                {
-                    this.mUIWwwgooglechText = new WpfText(this);
-                    #region Search Criteria
-                    this.mUIWwwgooglechText.SearchProperties[WpfText.PropertyNames.Name] = "www.google.ch";
-                    this.mUIWwwgooglechText.WindowTitles.Add("MainWindow");
-                    #endregion
-                }
-                return this.mUIWwwgooglechText;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WpfText mUIWwwgooglechText;
         #endregion
     }
     
@@ -1737,192 +1884,6 @@ namespace CodedUITestProject1
         
         #region Fields
         private WpfText mUIAnzahlErgebnisse0Text1;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class UIItemCustom22 : WpfCustom
-    {
-        
-        public UIItemCustom22(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfControl.PropertyNames.ClassName] = "Uia.Kategorie";
-            this.WindowTitles.Add("MainWindow");
-            #endregion
-        }
-        
-        #region Properties
-        public UIPasswoerterTable2 UIPasswoerterTable
-        {
-            get
-            {
-                if ((this.mUIPasswoerterTable == null))
-                {
-                    this.mUIPasswoerterTable = new UIPasswoerterTable2(this);
-                }
-                return this.mUIPasswoerterTable;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIPasswoerterTable2 mUIPasswoerterTable;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class UIPasswoerterTable2 : WpfTable
-    {
-        
-        public UIPasswoerterTable2(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfTable.PropertyNames.AutomationId] = "passwoerter";
-            this.WindowTitles.Add("MainWindow");
-            #endregion
-        }
-        
-        #region Properties
-        public UIItem1Row2 UIItem1Row
-        {
-            get
-            {
-                if ((this.mUIItem1Row == null))
-                {
-                    this.mUIItem1Row = new UIItem1Row2(this);
-                }
-                return this.mUIItem1Row;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIItem1Row2 mUIItem1Row;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class UIItem1Row2 : WpfRow
-    {
-        
-        public UIItem1Row2(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfRow.PropertyNames.Name] = "1";
-            this.SearchConfigurations.Add(SearchConfiguration.AlwaysSearch);
-            this.WindowTitles.Add("MainWindow");
-            #endregion
-        }
-        
-        #region Properties
-        public UIWwwgooglechCell3 UIWwwgooglechCell
-        {
-            get
-            {
-                if ((this.mUIWwwgooglechCell == null))
-                {
-                    this.mUIWwwgooglechCell = new UIWwwgooglechCell3(this);
-                }
-                return this.mUIWwwgooglechCell;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIWwwgooglechCell3 mUIWwwgooglechCell;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class UIWwwgooglechCell3 : WpfCell
-    {
-        
-        public UIWwwgooglechCell3(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WpfCell.PropertyNames.ColumnHeader] = "Zielsystem";
-            this.WindowTitles.Add("MainWindow");
-            #endregion
-        }
-        
-        #region Properties
-        public WpfText UIWwwgooglechText
-        {
-            get
-            {
-                if ((this.mUIWwwgooglechText == null))
-                {
-                    this.mUIWwwgooglechText = new WpfText(this);
-                    #region Search Criteria
-                    this.mUIWwwgooglechText.SearchProperties[WpfText.PropertyNames.Name] = "www.google.ch";
-                    this.mUIWwwgooglechText.WindowTitles.Add("MainWindow");
-                    #endregion
-                }
-                return this.mUIWwwgooglechText;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WpfText mUIWwwgooglechText;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class UIMainWindowWindow1 : WinWindow
-    {
-        
-        public UIMainWindowWindow1()
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.Name] = "MainWindow";
-            this.SearchProperties.Add(new PropertyExpression(WinWindow.PropertyNames.ClassName, "HwndWrapper", PropertyExpressionOperator.Contains));
-            this.WindowTitles.Add("MainWindow");
-            #endregion
-        }
-        
-        #region Properties
-        public WinButton UISchließenButton
-        {
-            get
-            {
-                if ((this.mUISchließenButton == null))
-                {
-                    this.mUISchließenButton = new WinButton(this);
-                    #region Search Criteria
-                    this.mUISchließenButton.SearchProperties[WinButton.PropertyNames.Name] = "Schließen";
-                    this.mUISchließenButton.WindowTitles.Add("MainWindow");
-                    #endregion
-                }
-                return this.mUISchließenButton;
-            }
-        }
-        
-        public WinTitleBar UIMainWindowTitleBar
-        {
-            get
-            {
-                if ((this.mUIMainWindowTitleBar == null))
-                {
-                    this.mUIMainWindowTitleBar = new WinTitleBar(this);
-                    #region Search Criteria
-                    this.mUIMainWindowTitleBar.WindowTitles.Add("MainWindow");
-                    #endregion
-                }
-                return this.mUIMainWindowTitleBar;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinButton mUISchließenButton;
-        
-        private WinTitleBar mUIMainWindowTitleBar;
         #endregion
     }
     
@@ -2008,18 +1969,6 @@ namespace CodedUITestProject1
         }
         
         #region Properties
-        public UIOKWindow UIOKWindow
-        {
-            get
-            {
-                if ((this.mUIOKWindow == null))
-                {
-                    this.mUIOKWindow = new UIOKWindow(this);
-                }
-                return this.mUIOKWindow;
-            }
-        }
-        
         public UIIhrPasswortlautetgibWindow UIIhrPasswortlautetgibWindow
         {
             get
@@ -2031,48 +1980,24 @@ namespace CodedUITestProject1
                 return this.mUIIhrPasswortlautetgibWindow;
             }
         }
-        #endregion
         
-        #region Fields
-        private UIOKWindow mUIOKWindow;
-        
-        private UIIhrPasswortlautetgibWindow mUIIhrPasswortlautetgibWindow;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
-    public class UIOKWindow : WinWindow
-    {
-        
-        public UIOKWindow(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "2";
-            this.WindowTitles.Add("Passwort");
-            #endregion
-        }
-        
-        #region Properties
-        public WinButton UIOKButton
+        public UIOKWindow UIOKWindow
         {
             get
             {
-                if ((this.mUIOKButton == null))
+                if ((this.mUIOKWindow == null))
                 {
-                    this.mUIOKButton = new WinButton(this);
-                    #region Search Criteria
-                    this.mUIOKButton.SearchProperties[WinButton.PropertyNames.Name] = "OK";
-                    this.mUIOKButton.WindowTitles.Add("Passwort");
-                    #endregion
+                    this.mUIOKWindow = new UIOKWindow(this);
                 }
-                return this.mUIOKButton;
+                return this.mUIOKWindow;
             }
         }
         #endregion
         
         #region Fields
-        private WinButton mUIOKButton;
+        private UIIhrPasswortlautetgibWindow mUIIhrPasswortlautetgibWindow;
+        
+        private UIOKWindow mUIOKWindow;
         #endregion
     }
     
@@ -2121,30 +2046,48 @@ namespace CodedUITestProject1
                 return this.mUIIhrPasswortlautetgibText1;
             }
         }
-        
-        public WinText UIIhrPasswortlautetgibText2
-        {
-            get
-            {
-                if ((this.mUIIhrPasswortlautetgibText2 == null))
-                {
-                    this.mUIIhrPasswortlautetgibText2 = new WinText(this);
-                    #region Search Criteria
-                    this.mUIIhrPasswortlautetgibText2.SearchProperties[WinText.PropertyNames.Name] = "Ihr Passwort lautet: gibbiX1";
-                    this.mUIIhrPasswortlautetgibText2.WindowTitles.Add("Passwort");
-                    #endregion
-                }
-                return this.mUIIhrPasswortlautetgibText2;
-            }
-        }
         #endregion
         
         #region Fields
         private WinText mUIIhrPasswortlautetgibText;
         
         private WinText mUIIhrPasswortlautetgibText1;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "15.0.26208.0")]
+    public class UIOKWindow : WinWindow
+    {
         
-        private WinText mUIIhrPasswortlautetgibText2;
+        public UIOKWindow(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "2";
+            this.WindowTitles.Add("Passwort");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UIOKButton
+        {
+            get
+            {
+                if ((this.mUIOKButton == null))
+                {
+                    this.mUIOKButton = new WinButton(this);
+                    #region Search Criteria
+                    this.mUIOKButton.SearchProperties[WinButton.PropertyNames.Name] = "OK";
+                    this.mUIOKButton.WindowTitles.Add("Passwort");
+                    #endregion
+                }
+                return this.mUIOKButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUIOKButton;
         #endregion
     }
 }

@@ -6,11 +6,11 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D8916B9F-74E9-47BB-A800-6513530A3357}</ProjectGuid>
+    <ProjectGuid>{B3D66485-056C-4DBA-A656-8EAE5CF0805D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CodedUITestProject1</RootNamespace>
-    <AssemblyName>CodedUITestProject1</AssemblyName>
+    <RootNamespace>CodedUITest1</RootNamespace>
+    <AssemblyName>CodedUITest1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

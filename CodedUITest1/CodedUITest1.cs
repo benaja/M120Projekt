@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.TestTools.UITest.Extension;
 using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
 
 
-namespace CodedUITestProject1
+namespace CodedUITest1
 {
     /// <summary>
     /// Summary description for CodedUITest1
@@ -23,19 +23,34 @@ namespace CodedUITestProject1
         }
 
         [TestMethod]
-        public void CodedUITestMethod1()
+        public void ErstelleKategorie()
+        {
+            // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
+            this.UIMap.ErstelleKategorie();
+        }
+
+        [TestMethod]
+        public void ErstellePasswort()
         {
 
-            this.UIMap.test();
-            this.UIMap.ErstelleKategorie();
             this.UIMap.ErstellePasswort();
-            this.UIMap.prueffePasswort();
+            this.UIMap.PrueffePasswort();
+
+        }
+
+        [TestMethod]
+        public void EditPasswort()
+        {
+
             this.UIMap.EditPasswort();
-            this.UIMap.prueffePasswortNachAenderung();
-            this.UIMap.sucheNachNichtExistierendem();
-            this.UIMap.prueffeAnzahlErgebnisse();
+            this.UIMap.PrueffePasswortNachEdit();
+        }
 
-
+        [TestMethod]
+        public void SucheNachNichtVorhandenem()
+        {
+            this.UIMap.SucheNachNichtVorhandenem();
+            this.UIMap.ErgebnisNachNichtVorhandenem();
 
         }
 
