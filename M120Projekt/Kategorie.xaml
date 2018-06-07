@@ -8,19 +8,26 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <DataGrid Name="passwoerter" AutoGenerateColumns="False" CanUserAddRows="false" SelectedCellsChanged="selectedCellsChanged">
-            <DataGrid.Columns >
+            <DataGrid.Columns>
                 <DataGridTextColumn Header="Zielsystem" Binding="{Binding Zielsystem}" Width="1*" />
                 <DataGridTextColumn Header="Login" Binding="{Binding Login}" Width="1*"/>
-
-                <!--<DataGridTemplateColumn Header="Login">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="Show Password" Click="Button_Click" ></Button>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>-->
-
             </DataGrid.Columns>
         </DataGrid>
+        <Canvas>
+            <Button x:Name="edit_button" Canvas.Bottom="10" Canvas.Right="10" Content="Bearbeiten" Width="80" Height="30" Click="edit_button_Click"></Button>
+        </Canvas>
     </Grid>
+    <UserControl.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#FF4286F4"></Setter>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="#00707070"></Setter>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect ShadowDepth="0" Opacity="0.8" Color="#FFA8A8A8"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
 </UserControl>

@@ -6,8 +6,100 @@
              xmlns:local="clr-namespace:M120Projekt"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <Label Content="Zielsystem"></Label>
-        <TextBox x:Name="zielsystem">test</TextBox>
+    <Grid Background="White" Margin="20,20,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="White">
+            <Grid.Effect>
+                <DropShadowEffect Direction="270" Color="#FFBBBBBB" BlurRadius="2" ShadowDepth="1"/>
+            </Grid.Effect>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Label Content="Zielsystem" FontSize="20"></Label>
+                <TextBox x:Name="zielsystem" FontSize="20" MinWidth="100" MaxWidth="300" TextChanged="zielsystem_TextChanged"/>
+            </WrapPanel>
+            <DockPanel Grid.Column="1">
+                <WrapPanel Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button x:Name="save_button" Content="Speichern" Width="70" Height="25" Margin="0,0,20,0" IsEnabled="False" Click="save_button_Click"></Button>
+                    <Button x:Name="cancel_button" Content="Abbrechen" Width="60" Height="25" Margin="0,0,20,0" Click="cancel_button_Click"></Button>
+                    <Button x:Name="delete_button" Content="Löschen" Visibility="Collapsed" Width="60" Height="25" Margin="0,0,20,0" Click="delete_button_Click"></Button>
+                </WrapPanel>
+            </DockPanel>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <WrapPanel Height="50">
+                    <Label Content="Login: "/>
+                    <TextBox x:Name="login" MinWidth="150" MaxWidth="200" TextChanged="login_TextChanged"/>
+                </WrapPanel>
+                <WrapPanel Height="50">
+                    <Label Content="Kategorie: "></Label>
+                    <ComboBox x:Name="kategorie" DropDownClosed="kategorie_DropDownClosed"/>
+                </WrapPanel>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <WrapPanel x:Name="password_buttons" Height="50" Visibility="Collapsed">
+                    <Button x:Name="show_password" Content="Passwort anzeigen" Width="110" Height="25" Margin="0,5,0,0" Click="show_password_Click"/>
+                    <Button x:Name="edit_password" Content="Passwort ändern" Width="100" Height="25" Margin="20,5,0,0" Click="edit_password_Click"/>
+                </WrapPanel>
+                <WrapPanel Height="50">
+                    <Label Content="Ablaufdatum"/>
+                    <DatePicker x:Name="ablaufdatum" SelectedDateChanged="ablaufdatum_SelectedDateChanged"></DatePicker>
+                </WrapPanel>
+                <WrapPanel Height="50">
+                    <Label Content="Erstelldatum:"/>
+                    <Label Content="" x:Name="erstelldatum"/>
+                </WrapPanel>
+                <Grid x:Name="set_new_password" Visibility="Visible">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Neues Passwort:" VerticalContentAlignment="Center"></Label>
+                    <PasswordBox x:Name="new_passwort" Width="200" Grid.Column="1" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="30"></PasswordBox>
+
+                    <Label Content="Passwort wiederholen:" Grid.Row="1" VerticalAlignment="Center"></Label>
+                    <PasswordBox x:Name="repeat_password" Width="200" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="30" ></PasswordBox>
+
+                </Grid>
+            </StackPanel>
+        </Grid>
     </Grid>
+    <UserControl.Resources>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Background" Value="White"/>
+            <Style.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#FF4286F4"></Setter>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="#00707070"></Setter>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect ShadowDepth="0" Opacity="0.8" Color="#FFA8A8A8"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
 </UserControl>

@@ -18,10 +18,11 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="400"/>
                 </Grid.ColumnDefinitions>
                 <DockPanel Grid.Column="1">
                     <WrapPanel DockPanel.Dock="Top" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <Button x:Name="new_button" Height="30" Width="70" Margin="0,0,20,0"  Content="Neu" HorizontalContentAlignment="Center" Click="new_button_Click"/>
                         <TextBox x:Name="search_textbox" Text="Suche" Width="200" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Background="White" BorderBrush="White" VerticalContentAlignment="Center" GotFocus="search_textbox_GotFocus" LostFocus="search_textbox_LostFocus">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
@@ -45,14 +46,19 @@
                 <ColumnDefinition Width="250"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <DockPanel Background="White">
-                <DockPanel.Effect>
+            <StackPanel Background="White" Panel.ZIndex="50">
+                <StackPanel.Effect>
                     <DropShadowEffect Direction="300" Color="#FFBBBBBB" BlurRadius="20" ShadowDepth="3"/>
-                </DockPanel.Effect>
-                <Label DockPanel.Dock="Top" Content="Wählen sie die Kategorie!" FontSize="15" Margin="25,0,0,0"/>
-                <StackPanel x:Name="kategorien" >
+                </StackPanel.Effect>
+                <StackPanel Margin="0,20,0,10">
+                    <Button x:Name="neue_kategorie" Content="Kategorie erstellen" HorizontalContentAlignment="Left" Padding="5,0,0,0" Width="200" Height="30" Margin="0,5,0,5" Click="neue_kategorie_Click"></Button>
+                    <Button x:Name="abgeloffene_passwoerter" Content="Abgeloffene Passwörter" HorizontalContentAlignment="Left" Padding="5,0,0,0" Width="200" Height="30" Margin="0,5,0,5" Click="abgeloffene_passwoerter_Click"></Button>
                 </StackPanel>
-            </DockPanel>
+                <Label Content="Wählen sie die Kategorie!" FontSize="15" Margin="25,0,0,0"/>
+                <StackPanel x:Name="kategorien">
+                   
+                </StackPanel>
+            </StackPanel>
             <Grid Grid.Column="1" x:Name="content"></Grid>
         </Grid>
     </Grid>

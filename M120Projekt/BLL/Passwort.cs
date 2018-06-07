@@ -71,7 +71,8 @@ namespace M120Projekt.BLL
         {
             using (var context = new DAL.Context())
             {
-                context.Passwort.Remove(passwort);
+                var itemtoRemove = context.Passwort.FirstOrDefault(p => p.PasswortId == passwort.PasswortId);
+                context.Passwort.Remove(itemtoRemove);
                 context.SaveChanges();
             }
         }

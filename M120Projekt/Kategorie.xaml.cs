@@ -20,13 +20,14 @@ namespace M120Projekt
     /// </summary>
     public partial class Kategorie : UserControl
     {
-        public Kategorie(int kategorieId)
+        DAL.Kategorie kategorie;
+        public Kategorie(long kategorieId)
         {
             InitializeComponent();
 
-            var kategorieData = BLL.Kategorie.LesenID(kategorieId);
+            kategorie = BLL.Kategorie.LesenID(kategorieId);
 
-            var passwoerterData = BLL.Passwort.LesenFremdschluesselGleich(kategorieData);
+            var passwoerterData = BLL.Passwort.LesenFremdschluesselGleich(kategorie);
 
             passwoerter.ItemsSource = passwoerterData;
         }
@@ -41,6 +42,13 @@ namespace M120Projekt
             parentWindow.showPassword(cellItemId);
         }
 
-        
+        private void edit_button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow parentWindow = (MainWindow)Window.GetWindow(this);
+            parentWindow.showDefault();
+            var kategorieElement = new M120Projekt.EditKategorie();
+            kategorieElement.setKategorie(kategorie.KategorieId);
+            parentWindow.content.Children.Add(kategorieElement);
+        }
     }
 }

@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="M120Projekt.PasswortList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:M120Projekt.DAL"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <DataGrid Name="passwoerter" AutoGenerateColumns="False" CanUserAddRows="false" SelectedCellsChanged="selectedCellsChanged">
+            <DataGrid.Columns >
+                <DataGridTextColumn Header="Zielsystem" Binding="{Binding Zielsystem}" Width="1*" />
+                <DataGridTextColumn Header="Login" Binding="{Binding Login}" Width="1*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

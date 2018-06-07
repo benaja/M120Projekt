@@ -24,78 +24,10 @@ namespace M120Projekt
         public MainWindow()
         {
             InitializeComponent();
-            List<DAL.Kategorie> kategorienData = BLL.Kategorie.LesenAlle();
-            
-            
-            foreach(var kategorie in kategorienData)
-            {
-                var button = new Button
-                {
-                    Content = kategorie.Name,
-                    Height = 30,
-                    Width = 200,
-                    Margin = new Thickness
-                    {
-                        Top = 5,
-                        Bottom = 5,
-                        Left = 25
-                    },
-                    HorizontalAlignment = HorizontalAlignment.Left,
-                    HorizontalContentAlignment = HorizontalAlignment.Left,
-                    Padding = new Thickness
-                    {
-                        Left = 5
-                    },
-                    Tag = kategorie.KategorieId
-                };
-                button.Click += select_kategorie_Click;
-                kategorien.Children.Add(button);
-                
-            }
+            updateKategorienButtons();
 
-
+            showAbgelaufenePasswörter();
         }
-        #region Demo
-        private void DemoErstellen()
-        {
-            // Kategorie (kurze Syntax)
-            DAL.Kategorie kategorie1 = new DAL.Kategorie{ Name = "Kategorie 1"};
-            Int64 kategorie1Id = BLL.Kategorie.Erstellen(kategorie1);
-            Debug.Print("Kategorie erstellt mit Id:" + kategorie1Id);
-            DAL.Kategorie kategorie2 = new DAL.Kategorie { Name = "Kategorie 2"};
-            Int64 kategorie2Id = BLL.Kategorie.Erstellen(kategorie2);
-            Debug.Print("Kategorie erstellt mit Id:" + kategorie2Id);
-            // Passwort (detaillierte Syntax)
-            DAL.Passwort passwort1 = new DAL.Passwort();
-            passwort1.Login = "vmadmin";
-            passwort1.PSW = "gibbiX12345";
-            passwort1.Eingabedatum = DateTime.Today;
-            passwort1.Ablaufdatum = DateTime.Today.AddMonths(1);
-            passwort1.Kategorie = kategorie1;
-            Int64 passwort1Id = BLL.Passwort.Erstellen(passwort1);
-            Debug.Print("Passwort erstellt mit Id:" + passwort1Id);
-        }
-        private void DemoAbfragen()
-        {
-            String output = "";
-            // Alle Records Passwort mit Details zu verknüpftem Record aus Kategorie
-            output += Environment.NewLine + "Alle Records Passwort";
-            foreach (DAL.Passwort classA in BLL.Passwort.LesenAlle())
-            {
-                output += Environment.NewLine + "Passwort Login:" + classA.Login;
-                output += Environment.NewLine + "Passwort Kategorie Name:" + classA.Kategorie.Name;
-            }
-            output += Environment.NewLine + "------------------------------------------------------";
-            // Alle Records Kategorie
-            output += Environment.NewLine + "Alle Records Kategorie";
-            foreach (DAL.Kategorie classB in BLL.Kategorie.LesenAlle())
-            {
-                output += Environment.NewLine + "Kategorie Name:" + classB.Name;
-            }
-            output += Environment.NewLine + "------------------------------------------------------";
-            Debug.Print(output);
-        }
-        #endregion
 
         private void search_textbox_GotFocus(object sender, RoutedEventArgs e)
         {
@@ -104,12 +36,22 @@ namespace M120Projekt
 
         private void search_textbox_LostFocus(object sender, RoutedEventArgs e)
         {
-            search_textbox.Text = "Suche";
+            //search_textbox.Text = "Suche";
         }
 
         private void search_button_Click(object sender, RoutedEventArgs e)
         {
+            var passwörter = BLL.Passwort.LesenAttributWie(search_textbox.Text);
 
+            List<long> passwörterId = new List<long>();
+            foreach(DAL.Passwort passwort in passwörter)
+            {
+                passwörterId.Add(passwort.PasswortId);
+            }
+
+            var passwortList = new M120Projekt.PasswortList(passwörterId);
+
+            content.Children.Add(passwortList);
         }
 
         private void select_kategorie_Click(object sender, RoutedEventArgs e)
@@ -119,9 +61,9 @@ namespace M120Projekt
 
             var kategorie = BLL.Kategorie.LesenID(Convert.ToInt64(clicktButtonTag));
 
-            var passwörter = BLL.Passwort.LesenFremdschluesselGleich(kategorie);
+            //var passwörter = BLL.Passwort.LesenFremdschluesselGleich(kategorie);
 
-            var kagegorieElement = new M120Projekt.Kategorie((int)kategorie.KategorieId);
+            var kagegorieElement = new M120Projekt.Kategorie(kategorie.KategorieId);
 
             content.Children.Add(kagegorieElement);
         }
@@ -130,7 +72,88 @@ namespace M120Projekt
         {
             content.Children.Clear();
 
+            var passwordUserControl = new Passwort();
+            passwordUserControl.setPassword(passwordId);
 
+            content.Children.Add(passwordUserControl);
+        }
+
+        public void showAbgelaufenePasswörter()
+        {
+            var passwörter = BLL.Passwort.LesenAlle();
+            List<long> abgeloffenePasswörter = new List<long>();
+            foreach (DAL.Passwort passwort in passwörter)
+            {
+                if (passwort.Abgelaufen)
+                {
+                    abgeloffenePasswörter.Add(passwort.PasswortId);
+                }
+            }
+            var passwortListElement = new M120Projekt.PasswortList(abgeloffenePasswörter);
+
+            content.Children.Clear();
+            content.Children.Add(passwortListElement);
+
+            if (abgeloffenePasswörter.Count() > 0)
+            {
+                MessageBox.Show("Bitte aktualisieren sie folgende Passwörter!");
+            }
+        }
+
+        public void showDefault()
+        {
+            content.Children.Clear();
+        }
+
+        private void new_button_Click(object sender, RoutedEventArgs e)
+        {
+            content.Children.Clear();
+            var passwordUserControl = new Passwort();
+
+            content.Children.Add(passwordUserControl);
+        }
+
+        private void abgeloffene_passwoerter_Click(object sender, RoutedEventArgs e)
+        {
+            showAbgelaufenePasswörter();
+        }
+
+        private void neue_kategorie_Click(object sender, RoutedEventArgs e)
+        {
+            showDefault();
+            var kategorieElement = new M120Projekt.EditKategorie();
+            content.Children.Add(kategorieElement);
+        }
+
+        public void updateKategorienButtons()
+        {
+            kategorien.Children.Clear();
+            List<DAL.Kategorie> kategorienData = BLL.Kategorie.LesenAlle();
+
+
+            foreach (var kategorie in kategorienData)
+            {
+                var button = new Button
+                {
+                    Content = kategorie.Name,
+                    Height = 30,
+                    Width = 200,
+                    Margin = new Thickness
+                    {
+                        Top = 5,
+                        Bottom = 5
+                    },
+                    HorizontalContentAlignment = HorizontalAlignment.Left,
+                    Padding = new Thickness
+                    {
+                        Left = 5
+                    },
+                    Tag = kategorie.KategorieId
+                };
+                button.Click += select_kategorie_Click;
+                kategorien.Children.Add(button);
+
+            }
         }
     }
 }

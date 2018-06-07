@@ -65,7 +65,8 @@ namespace M120Projekt.BLL
         {
             using (var context = new DAL.Context())
             {
-                context.Kategorie.Remove(kategorie);
+                var itemtoRemove = context.Kategorie.FirstOrDefault(k => k.KategorieId == kategorie.KategorieId);
+                context.Kategorie.Remove(itemtoRemove);
                 context.SaveChanges();
             }
         }
